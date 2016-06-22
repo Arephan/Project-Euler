@@ -1,7 +1,4 @@
-#What is the largest prime factor of the number 600851475143 ?
-
 import math 
-import string
 
 def is_a_prime(n):
     """Test that there are no remainders when n is divided by x in range between 2 and sqrt(n)
@@ -40,5 +37,3 @@ def find_prime_factors(n):
             current_prime = find_next_prime(current_prime)
     
     return prime_factors
-
-print find_prime_factors(600851475143)[-1]
