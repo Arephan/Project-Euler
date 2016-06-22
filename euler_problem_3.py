@@ -4,7 +4,7 @@ import math
 import string
 
 def is_a_prime(n):
-    """Tests that there are no remainders when n is divided by x in range between 2 and sqrt(n)
+    """Test that there are no remainders when n is divided by x in range between 2 and sqrt(n)
     """
     for x in range(2, int(math.sqrt(n)+1)):
         if(n%x == 0):
@@ -23,7 +23,9 @@ def find_next_prime(n):
         
     return n
 
-def find_greatest_prime_factor(n):
+def find_prime_factors(n):
+    """while greatest prime isn't found, find next prime
+    """
     current_prime = 2
     prime_factors = []
     greatest_prime_found = 0
@@ -39,4 +41,4 @@ def find_greatest_prime_factor(n):
     
     return prime_factors
 
-print find_greatest_prime_factor(600851475143)[-1]
+print find_prime_factors(600851475143)[-1]
